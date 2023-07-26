@@ -13,22 +13,13 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:tylleum_gateway_flutter/request.dart';
 
 class tylleum_gateway_flutter extends StatefulWidget {
-  late final String coin;
   late final num fiat;
-  late final num amount;
-  late final String receiver;
-  late final String TxType;
-  late final String merchantType;
+
   late final String BusinessName;
   late final String paymentID;
 
   tylleum_gateway_flutter({
-    required this.coin,
     required this.fiat,
-    required this.amount,
-    required this.receiver,
-    required this.TxType,
-    required this.merchantType,
     required this.BusinessName,
     required this.paymentID,
   });
@@ -124,7 +115,7 @@ class _tylleum_gateway_flutterState extends State<tylleum_gateway_flutter> {
                           children: <Widget>[
                             QrImage(
                               data:
-                                  '{"fiat":${widget.fiat},"coin":"${widget.coin}","receiver":"${widget.BusinessName}","type":"${widget.TxType}","id":"${widget.paymentID}"}',
+                                  '{"fiat":${widget.fiat},"coin":"USDT","receiver":"${widget.BusinessName}","type":"Owner","id":"${widget.paymentID}"}',
                               version: QrVersions.auto,
                               size: 200.0,
                             ),
