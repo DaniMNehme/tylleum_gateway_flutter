@@ -111,7 +111,7 @@ class _tylleum_gateway_flutterState extends State<tylleum_gateway_flutter> {
                         Stack(
                           alignment: Alignment.center,
                           children: <Widget>[
-                            QrImageView(
+                            QrImage(
                               data:
                                   '{"fiat":${widget.fiat},"coin":"${widget.coin}","receiver":"${widget.BusinessName}","type":"${widget.TxType}","id":"${widget.paymentID}"}',
                               version: QrVersions.auto,
