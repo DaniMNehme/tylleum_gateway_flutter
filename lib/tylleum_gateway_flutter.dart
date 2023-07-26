@@ -22,6 +22,17 @@ class tylleum_gateway_flutter extends StatefulWidget {
   late final String BusinessName;
   late final String paymentID;
 
+  tylleum_gateway_flutter({
+    required this.coin,
+    required this.fiat,
+    required this.amount,
+    required this.receiver,
+    required this.TxType,
+    required this.merchantType,
+    required this.BusinessName,
+    required this.paymentID,
+  });
+
   @override
   _tylleum_gateway_flutterState createState() =>
       _tylleum_gateway_flutterState();
